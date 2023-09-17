@@ -1,0 +1,144 @@
+---
+title: "AWS IAM Console"
+---
+
+Step 1: IAM Policy Creation
+
+Step 2: Add an IAM role
+
+Step 3: Link IAM
+
+1: Navigate to the "[Instances](https://antimetal.com/instances)" tab in the Antimetal Dashboard
+
+2: Click the "`Connect AWS`" button.
+
+3: Navigate to the [IAM policy page on AWS](https://www.antimetal.com).
+
+4: Click "`Create a Policy`" button.
+
+5: In the JSON tab, copy and paste the following permissions:
+
+```json
+{
+
+    "Version": "2012-10-17",
+    "Statement": [ {
+      "Action": [ "application-autoscaling:Describe*",
+        "autoscaling:Describe*",
+        "ce:Describe*",
+        "ce:Get*",
+        "ce:List*",
+        "cloudwatch:GetMetricData",
+        "ec2:Describe*",
+        "ec2:AcceptReservedInstancesExchangeQuote",
+        "ec2:CancelReservedInstancesListing",
+        "ec2:CreateReservedInstancesListing",
+        "ec2:DeleteQueuedReservedInstances",
+        "ec2:ModifyReservedInstances",
+        "ec2:PurchaseHostReservation",
+        "ec2:PurchaseReservedInstancesOffering",
+        "pricing:DescribeServices",
+        "pricing:GetAttributeValues",
+        "pricing:GetProducts",
+        "savingsplans:Describe*",
+        "savingsplans:List*",
+        "servicequotas:Get*",
+        "servicequotas:List*",
+        "support:*"
+        ],
+        "Effect": "Allow",
+        "Resource": "*"
+    }
+
+    ]
+  }
+```
+
+6: Click next until you reach the "Review Policy" page.
+
+7: Set the policy name as `AMSAVE` and click on “Create Policy”.
+
+
+Click Continue
+
+1: Add a new role to your [IAM role page on AWS](https://www.antimetal.com).
+
+2: Click “`AWS Account`”. Select AWS account under "`Trusted Entity Type`".
+
+3: Select “`Another AWS Account`". Paste Antimetal's account ID in the field provided: `042894766506`
+
+4: Select the option to require “`External ID`”. Paste the external ID we provide.
+
+5\. On the "`Add Permissions`" page, select the `AMSAVE` policy.
+
+6: Click "`Next`". 
+
+7: Under the "`Name, Review, and Create`" page, set the role name as `AMSAVE.`
+
+8: Click on “`Create Role`”.
+
+
+Click `Continue`
+
+1: Link your new IAM Role. It should look something like this
+
+![](/images/product-docs/antimetal-documentation/getting-started/connection-methods/1.png)
+
+2: Paste your Role ARN into the corresponding field on the Antimetal site
+
+
+Click `Continue`. Your AWS account will now be linked to Antimetal. 
+
+**Antimetal IAM Integration (Step by Step)**
+
+**Step 1:** Navigate to the "[Instances](https://antimetal.com/instances)" tab in the Antimetal Dashboard.
+
+**Step 2:** Click the "Connect AWS" button.
+
+**Step 3:** Click "GO TO IAM POLICY PAGE" which will redirect you to the [corresponding page](https://us-east-1.console.aws.amazon.com/iamv2/home?region=us-east-1#/policies) in AWS. _Note:_ If you are not signed in, you will be directed to sign in before proceeding. 
+
+**Step 4:** Click "Create Policy" button.
+
+![](/images/product-docs/antimetal-documentation/getting-started/connection-methods/2.gif)
+
+**Step 5:** In the JSON tab, paste the code from the IAM Creation Modal on the Antimetal site. When done, click the "Next: Tags" button on the bottom right.
+
+![](/images/product-docs/antimetal-documentation/getting-started/connection-methods/3.gif)
+
+**Step 6:** Click "Next: Review" on the bottom right of the page. This will take you to the "Review Policy" page. 
+
+**Step 7:** Set the policy name as `AMSAVE` and click on “Create Policy". When done you will be redirected to the IAM Management Console.
+
+![](/images/product-docs/antimetal-documentation/getting-started/connection-methods/4.gif)
+
+**Step 8:** Navigate to the "[IAM Role Page](https://us-east-1.console.aws.amazon.com/iamv2/home#/roles)". 
+
+**Step 9:** Click "Create role" in the top right corner.
+
+![](/images/product-docs/antimetal-documentation/getting-started/connection-methods/5.png)
+
+**Step 10:** Click “AWS Account”. Select AWS account under "Trusted Entity Type".
+
+![](/images/product-docs/antimetal-documentation/getting-started/connection-methods/6.gif)
+
+**Step 11:** Select “Another AWS Account". Paste Antimetal's account ID in the field provided: `042894766506`
+
+![](/images/product-docs/antimetal-documentation/getting-started/connection-methods/7.gif)
+
+**Step 12:** Select the option to require “External ID”. Paste the external ID provided on the Antimetal site.
+
+![](/images/product-docs/antimetal-documentation/getting-started/connection-methods/8.gif)
+
+**Step 13:** On the "Add Permissions" page, select the `AMSAVE` policy by selecting the checkbox to the left of the policy. When done, click "Next" on the bottom of the page
+
+**Step 14:** Under the "Name, Review, and Create" page, set the role name as `AMSAVE`. When done, click "Create Role"
+
+![](/images/product-docs/antimetal-documentation/getting-started/connection-methods/9.gif)
+
+**Step 15:** Click Role AMSAVE and copy the ARN number
+
+![](/images/product-docs/antimetal-documentation/getting-started/connection-methods/10.gif)
+
+**Step 16:** Paste the ARN into modal on the Antimetal site
+
+Your IAM role will now be added to your account. It may take a minute or two for us to complete the analysis of your account and generate recommendations. 

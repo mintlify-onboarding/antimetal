@@ -1,0 +1,77 @@
+{
+    "name": "Antimetal",
+    "logo": {
+      "light": "/logo/light.png",
+      "dark": "/logo/dark.png"
+    },
+    "favicon": "/favicon.png",
+    "colors": {
+      "primary": "#C2E100",
+      "light": "#D2F300",
+      "dark": "#C2E100"
+    },
+    "topbarCtaButton": {
+      "name": "Preview Savings",
+      "url": "http://app.antimetal.com/auth/register?_gl=1*3h2k5f*_ga*MTEzNTc0NTIuMTY5NDk3ODk4NQ..*_ga_DE7DBN3357*MTY5NDk3ODk4NS4xLjAuMTY5NDk3ODk4NS42MC4wLjA.*_gcl_au*NTM1NDI0NzE4LjE2OTQ5Nzg5ODUuNzUwMjEyNjk4LjE2OTQ5Nzg5ODYuMTY5NDk3ODk4NQ.."
+    },
+    "topbarLinks": [
+      {
+        "name": "Login",
+        "url": "http://app.antimetal.com/auth/login?_gl=1*3h2k5f*_ga*MTEzNTc0NTIuMTY5NDk3ODk4NQ..*_ga_DE7DBN3357*MTY5NDk3ODk4NS4xLjAuMTY5NDk3ODk4NS42MC4wLjA.*_gcl_au*NTM1NDI0NzE4LjE2OTQ5Nzg5ODUuNzUwMjEyNjk4LjE2OTQ5Nzg5ODYuMTY5NDk3ODk4NQ.."
+      }
+    ],
+    "anchors": [
+      {
+        "name": "Blog",
+        "icon": "newspaper",
+        "url": "https://www.antimetal.com/blog"
+      },
+      {
+        "name": "FAQ",
+        "icon": "block-question",
+        "url": "/faq"
+      }
+    ],
+    "navigation": [
+        {
+            "group": "ANTIMETAL Documentation",
+            "pages": [
+              "product-docs/antimetal-documentation/readme",
+              {
+                "group": "Getting Started",
+                "pages": [
+                  "product-docs/antimetal-documentation/getting-started",
+                  {
+                    "group": "AWS Account Connection Methods",
+                    "pages": [
+                      "product-docs/antimetal-documentation/getting-started/connection-methods",
+                      "product-docs/antimetal-documentation/getting-started/connection-methods/cloudformation",
+                      "product-docs/antimetal-documentation/getting-started/connection-methods/how-to-create-an-iam-role",
+                      "product-docs/antimetal-documentation/getting-started/connection-methods/aws-cli",
+                      "product-docs/antimetal-documentation/getting-started/connection-methods/terraform"
+                    ]
+                  },
+                  "product-docs/antimetal-documentation/getting-started/aws-seller-registration"
+                ]
+              },
+              {
+                "group": "Product Overview",
+                "pages": [
+                    "product-docs/antimetal-documentation/product-overview/recommendations",
+                    "product-docs/antimetal-documentation/product-overview/autopilot",
+                    "product-docs/antimetal-documentation/product-overview/admin",
+                    "product-docs/antimetal-documentation/product-overview/instances",
+                    "product-docs/antimetal-documentation/product-overview/underutilization-insurance",
+                    "product-docs/antimetal-documentation/product-overview/workspaces"
+                ]
+              },
+              "product-docs/antimetal-documentation/faq"
+            ]
+          }
+    ],
+    "footerSocials":
+      {
+          "twitter": "https://twitter.com/AntimetalCloud",
+          "linkedin": "https://www.linkedin.com/company/antimetal/"
+      }
+  }

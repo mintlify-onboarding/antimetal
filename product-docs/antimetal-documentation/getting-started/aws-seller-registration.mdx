@@ -1,0 +1,63 @@
+---
+title: "AWS Seller Registration"
+description: "Before Antimetal can sell or transfer instances on your behalf, you will need to be seller registered on the Reserved Instance Marketplace. "
+---
+
+<Note>
+   For a more in-depth guide on Seller Registration, you can follow [these instructions](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ri-market-general.html#ri-market-seller-profile) from AWS.
+</Note>   
+
+## Register as a seller
+
+To sell in the Reserved Instance Marketplace, you must first register as a seller. During registration, you provide the following information:
+
+<Card title="Bank information" icon="piggy-bank" iconType="duotone">
+  AWS must have your bank information in order to disburse funds collected when you sell your reservations. The bank you specify must have a US address. For more information, see [Bank account for disbursement](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ri-market-general.html#ri-market-concepts-bank).
+</Card>
+<Card title="Tax information" icon="building-columns" iconType="duotone">
+  All sellers are required to complete a tax information interview to determine any necessary tax reporting obligations. For more information, see [Tax information](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ri-market-general.html#ri-market-concepts-taxinfo).
+</Card>
+
+After AWS receives your completed seller registration, you receive an email confirming your registration and informing you that you can get started selling in the Reserved Instance Marketplace.
+
+**Note:** Only the AWS account root user can register an account as a seller. 
+
+## Bank account for disbursement
+
+AWS must have your bank information in order to disburse funds collected when you sell your Reserved Instance. The bank you specify must have a US address. For more information, see [Additional seller requirements for paid products](https://docs.aws.amazon.com/marketplace/latest/userguide/user-guide-for-sellers.html#additional-seller-requirements-for-paid-products) in the _AWS Marketplace Seller Guide_.
+
+**To register a default bank account for disbursements**
+
+1. Open the [Reserved Instance Marketplace Seller Registration](https://portal.aws.amazon.com/ec2/ri/seller%5Fregistration) page and sign in using your AWS credentials.
+
+2. On the Manage Bank Account page, provide the following information about the bank through to receive payment:  
+   * Bank account holder name  
+   * Routing number  
+   * Account number  
+   * Bank account type
+
+After registration, the bank account provided is set as the default, pending verification with the bank. It can take up to two weeks to verify a new bank account, during which time you can't receive disbursements. For an established account, it usually takes about two days for disbursements to complete.
+
+**To change the default bank account for disbursement**
+
+1. On the [Reserved Instance Marketplace Seller Registration](https://portal.aws.amazon.com/ec2/ri/seller%5Fregistration) page, sign in with the account that you used when you registered.
+
+2. On the Manage Bank Account page, add a new bank account or modify the default bank account as needed.
+
+## Tax information
+
+Your sale of Reserved Instances might be subject to a transaction-based tax, such as sales tax or value-added tax. You should check with your business's tax, legal, finance, or accounting department to determine if transaction-based taxes are applicable. You are responsible for collecting and sending the transaction-based taxes to the appropriate tax authority.
+
+As part of the seller registration process, you must complete a tax interview in the AWS [Seller Registration Portal](https://portal.aws.amazon.com/ec2/ri/seller%5Fregistration?action=taxInterview). The interview collects your tax information and populates an IRS form W-9, W-8BEN, or W-8BEN-E, which is used to determine any necessary tax reporting obligations.
+
+The tax information you enter as part of the tax interview might differ depending on whether you operate as an individual or business, and whether you or your business are a US or non-US person or entity. As you fill out the tax interview, keep in mind the following:
+
+* Information provided by AWS, including the information in this topic, does not constitute tax, legal, or other professional advice. To find out how the IRS reporting requirements might affect your business, or if you have other questions, contact your tax, legal, or other professional advisor.
+
+* To fulfill the IRS reporting requirements as efficiently as possible, answer all questions and enter all information requested during the interview.
+
+* Check your answers. Avoid misspellings or entering incorrect tax identification numbers. They can result in an invalidated tax form.
+
+Based on your tax interview responses and IRS reporting thresholds, Amazon might file Form 1099-K. Amazon mails a copy of your Form 1099-K on or before January 31 in the year following the year that your tax account reaches the threshold levels. For example, if your account reaches the threshold in 2018, your Form 1099-K is mailed on or before January 31, 2019.
+
+For more information about IRS requirements and Form 1099-K, see the [IRS](http://www.irs.gov/newsroom/form-1099-k-frequently-asked-questions-reporting) website.

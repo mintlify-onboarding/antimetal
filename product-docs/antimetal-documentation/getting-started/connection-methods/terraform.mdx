@@ -1,0 +1,26 @@
+---
+title: "Terraform"
+description: "Antimetal provides a custom [Terraform module](https://registry.terraform.io/modules/antimetal/antimetal/aws/latest) that allows you to create your Antimetal Cross-Account IAM Role directly within your infrastructure management workflow."
+---
+
+To get started:
+
+1. Copy the provided Terraform snippet. It should look something like this:
+
+```ruby
+module "antimetal_role" {
+  source = "antimetal/antimetal/aws"
+
+  # Role name is a personal preference that suits best your needs.
+  # It's used on Antimetal application to identify the account.
+  role_name = "Development"
+
+  # External ID should be random and securely generated.
+  # DO NOT use this value, as its publicly available on this repository.
+  external_id = "ynGu065M3Kee"
+}
+```
+
+1. Add the snippet copied from the previous step to your existing Terraform configuration and run `terraform apply`.
+
+2. Copy the Role ARN output from the `terraform apply` step and paste it in corresponding field on the Antimetal website.

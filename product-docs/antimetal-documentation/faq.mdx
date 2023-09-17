@@ -1,0 +1,117 @@
+---
+title: "FAQ"
+---
+
+## Does Antimetal perform penetration tests periodically?
+
+Yes. Antimetal outsources penetration testing to a third party that regularly performs comprehensive testing. If you would like to see a certification of completion, please email [support@antimetal.com](mailto:support@antimetal.com).
+
+## I already have AWS Savings Plans and Reserved Instances in place - will the recommendations account for these?
+
+Yes. Antimetal will take your existing Savings Plans and Reserved Instances into account before making recommendations.
+
+## Will I be billed for AWS Savings Plans and Reserved instances that I already have in place?
+
+No. You will not be charged for existing Savings Plans or Reserved Instances. You will only be charged for any changes that Antimetal makes, not changes that you have done on your own.
+
+## Does Antimetal have any security certifications like SOC2?
+
+Yes we are currently SOC2 Type 1 certified, our Type 2 audit will be completed October 5, 2023.
+
+## Is Autopilot the right fit for me?
+
+AWS has [a 30-day minimum](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ri-market-general.html#ri-seller-limits) wait time for Reserved Instances before they can be sold on the AWS marketplace. This means that we cannot sell any instances for the first 30 days after buying them for you. As a result, if you plan on dramatically reducing your infrastructure in the next 30 days, then Autopilot is not a good fit for you.
+
+## Will buying Reserved Instances through Antimetal change my AWS Bill?
+
+We only purchase no-upfront RIs, meaning that you will not be charged more when an RI is purchased, and there will be no transaction reflected in your AWS bill. In the same way, when we sell no-upfront commitments, there are no funds being exchanged from AWS to your account.
+
+## Does Antimetal have a bug bounty program?
+
+Not yet. But if you see any safety issues, email us at support@antimetal.com and we will make sure to reward you.
+
+## Does Antimetal support SAML, MFA, and SSO?
+
+Currently, we allow social login (OAuth) for Google and GitHub as well as SSO on request.
+
+## Will Antimetal cause server downtime or interrupt developer workflows?
+
+No. Antimetal works at the billing layer and is unable to modify your environment. There is no chance for any server downtime or interruptions to your developer workflows!
+
+## Does Antimetal require any engineering work?
+
+No. Getting started with Antimetal only requires setting up an IAM policy and an IAM role in your AWS organization
+
+## What is Antimetal’s pricing structure?
+
+Antimetal bills 10% of savings generated - no hidden fees, conditions, or surprises. Our savings are metered directly off the impact derived from our recommendation so that you are able to enact other cost saving measures as you wish.
+
+## What data does Antimetal collect?
+
+We collect only the metadata specified by the IAM role needed to connect you to our dashboard.
+
+## If you disconnect from the dashboard at any point, whether at the POC or post-activation stage, Antimetal does not maintain any record of your information.
+
+## Do I need a US bank account?
+
+Providing US bank account details is an AWS prerequisite when signing up for the RI Marketplace.
+
+## As Antimetal only deals in no-upfront Reserved Instances, this account should never be billed.
+
+If you don't have a US bank account, don’t worry, we can still help you save. Send us an email at [support@antimetal.com](mailto:support@antimetal.com)
+
+## How soon can I expect to start seeing savings?
+
+You will be able to start seeing savings through the dashboard as soon as your account is activated. Initial RI purchases are made incrementally to gradually cover more and more of your eligible workloads until maximum coverage and maximum savings are achieved at the end of the ramping period.
+
+## Why do I see recommendations for instance sizes that aren't in my account?
+
+Reserved Instances don't apply 1-to-1 with on-demand EC2 instances. A Reserved Instance can apply to any usage within a particular instance family. This means that small Reserved Instances can combine together to apply to larger on-demand instances, and large Reserved Instances can cover multiple smaller on-demand instances. As a result, you'll likely see recommendations that don't necessarily match the sizes of the on-demand instances in your account.
+
+This feature is known as Reserved Instance size flexibility. You can read more about it [here](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/apply%5Fri.html).
+
+## Is there a spend threshold to use Antimetal?
+
+No. We do not have a minimum threshold of spend. We accept everyone from customers on the free tier and those who are using credits to those that have millions in spend and EDP in place. 
+
+## Can I receive my invoices via email?
+
+Antimetal's billing is powered by [Stripe](https://stripe.com). You can access and download invoices directly from the billing tab in your organization's settings. You can update your details any time there as well.
+
+## I don't have any eligible savings? Why is that? 
+
+The reason that you don't have any eligible savings is likely because you don't have any EC2 instances. At the moment Antimetal only offers savings on EC2 or EC2 underwritten instances, but will offer a variety of other savings tools in the near future. 
+
+## I want to know what approving the recommendations actually does. If I approve the recommendation for an m6a.8xlarge, what exactly does Antimetal do to my account? 
+
+Antimetal recommends _Reserved Instances (RIs)._ These are instances at the billing layer that serve as an abstraction for long-term commitments. Effectively, an RI is a 1-3 year commitment to a particular instance at up to a 75% price discount. You can read more about RIs [here](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-reserved-instances.html).
+
+Antimetal uses AI to generate these recommendations, making them much more comprehensive and personalized than what you’d get through Amazon, and we automatically offload these RIs for you if they ever go underutilized. You can read more about that process in [our docs](https://docs.antimetal.com/product-docs/antimetal-documentation/product-overview/underutilization-insurance).
+
+In short, we do not modify or touch your physical infrastructure. You won’t experience any downtime or changes in server state by using Antimetal. The only change on your end is the Reserved Instance will be added to your account’s billing layer.
+
+## Are you able to repurpose savings plan similar to RIs?
+
+Unfortunately, there is no way to offload the commitment of SPs like RIs, but we are launching a group-buying product in the next few months. Email support@antimetal.com if you are interested in this functionality. 
+
+## What are the recommendations in my dashboard for? 
+
+These are recommendations for EC2 and RDS Reserved Instances. If you’re not familiar, Reserved Instances (RIs) are commitments to use a specific instance for a specified period of time, offering discounted pricing for long-term usage. Antimetal allows you to take advantage of these discounts without the long-term commitments. 
+
+## Do your recommendations take Saving Plans into account? 
+
+Yes! Our recommendations will consider whatever savings plans and RIs you already have in place. 
+
+If I have bought a Reserved Instance with Antimetal and I terminate the instance, what happens?
+
+When you terminate an instance, we will detect that change and the corresponding sell recommendation will populate in the dashboard (if you have autopilot on, this action will automatically execute). Once the recommendation is populated, all that you need to do is approve it and the instance will be either transferred to another account within our secondary marketplace of customers or listed for sale on the reserved instance marketplace.
+
+The only thing that you need to do on your end is to complete seller registration so that AWS allows the transaction to go through. This is a precaution that they have put in place to help fight against money laundering and other illicit activity.
+
+Here are the corresponding docs for that:
+
+* [https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ri-market-general.html#ri-market-seller-profile](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ri-market-general.html#ri-market-seller-profile)
+
+* [https://docs.antimetal.com/product-docs/antimetal-documentation/getting-started/aws-seller-registration](https://docs.antimetal.com/product-docs/antimetal-documentation/getting-started/aws-seller-registration)
+
+**Note:** This list of FAQs will continue to be updated over time, if you have a question that is not answered here, shoot us an email at support@antimetal.com.

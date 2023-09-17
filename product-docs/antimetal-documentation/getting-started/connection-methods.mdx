@@ -1,0 +1,22 @@
+---
+title: "AWS Account Connection Methods"
+sidebarTitle: "Overview"
+description: "To connect your AWS account, Antimetal uses a “[Cross Account IAM Role](https://docs.aws.amazon.com/IAM/latest/UserGuide/id%5Froles%5Fcommon-scenarios%5Fthird-party.html)”. This is AWS’ preferred method for cross-account interactions, providing a [secure and reliable connection](https://aws.amazon.com/blogs/apn/securely-accessing-customer-aws-accounts-with-cross-account-iam-roles/)."
+---
+
+[Cross-account IAM roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id%5Froles%5Fcommon-scenarios%5Fthird-party.html) allow customers to securely grant access to AWS resources in their account to a third party, like Antimetal while retaining the ability to control and audit who is accessing your AWS account. Cross-account roles reduce the amount of sensitive information APN Partners need to store for their customers so that they can focus on their product instead of managing keys.
+
+The creation of an IAM role means that Antimetal will never require sensitive access credentials, account logins, passwords, or other information. 
+
+#### There are four ways to connect your AWS account:
+
+<CardGroup cols={2}>
+  <Card title="AWS IAM Console" icon="aws" iconType="duotone" herf="(/product-docs/antimetal-documentation/getting-started/connection-methods/how-to-create-an-iam-role">
+  </Card>
+  <Card title="AWS CLI" icon="square-terminal" iconType="duotone" herf="/product-docs/antimetal-documentation/getting-started/connection-methods/aws-cli">
+  </Card>
+  <Card title="Cloudformation" icon="cloud" iconType="duotone" herf="/product-docs/antimetal-documentation/getting-started/connection-methods/cloudformation">
+  </Card>
+  <Card title="Terraform" icon="lock" iconType="duotone" herf="/product-docs/antimetal-documentation/getting-started/connection-methods/terraform">
+  </Card>
+</CardGroup>
