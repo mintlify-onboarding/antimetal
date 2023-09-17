@@ -6,9 +6,9 @@
     },
     "favicon": "/favicon.png",
     "colors": {
-      "primary": "#C2E100",
-      "light": "#D2F300",
-      "dark": "#C2E100"
+      "primary": "#BEDD00",
+      "light": "#E2FF2C",
+      "dark": "#BEDD00"
     },
     "topbarCtaButton": {
       "name": "Preview Savings",
